@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0d0f11;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difficulty-screen {
+    width: 750px;
+    min-height: 490px;
+
+    background: #f7f7f7;
+
+    border-radius: 10px;
+
+    padding: 45px 100px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.difficulty-screen h1 {
+    text-align: center;
+
+    color: #17191b;
+
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;
+}
+
+.difficulty-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.difficulty {
+    height: 78px;
+
+    border: 1px solid #dedede;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.difficulty:hover {
+    background: #eeeeee;
+}
+
+.difficulty input {
+    display: none;
+}
+
+.radio {
+    width: 38px;
+    height: 38px;
+
+    border: 2px solid #cfcfcf;
+    border-radius: 50%;
+
+    position: relative;
+
+    margin-right: 35px;
+}
+
+.difficulty input:checked + .radio {
+    border-color: #6fae32;
+}
+
+.difficulty input:checked + .radio::after {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    background: #6fae32;
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.difficulty-name {
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+.difficulty-description {
+    margin-left: auto;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+.easy .difficulty-name {
+    color: #6fae32;
+}
+
+.medium .difficulty-name {
+    color: #e5a414;
+}
+.hard .difficulty-name {
+    color: #d43d35;
+}
+
+.difficulty-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 24px;
+
+    margin-top: 30px;
+}
+
+.difficulty-buttons button {
+    height: 60px;
+
+    border-radius: 5px;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.play-btn {
+    width: 220px;
+
+    border: none;
+
+    background: #80bb3b;
+    color: white;
+}
+
+.play-btn:hover {
+    background: #6fa832;
+}
+
+.back-btn {
+    width: 185px;
+
+    background: transparent;
+
+    border: 1px solid #cfcfcf;
+
+    color: #555;
+}
+
+.back-btn:hover {
+    background: #eeeeee;
+}
+@media (max-width: 800px) {
+
+    .difficulty-screen {
+        width: 92%;
+        padding: 35px 30px;
+    }
+
+    .difficulty-screen h1 {
+        font-size: 32px;
+    }
+
+    .difficulty {
+        padding: 0 18px;
+    }
+
+    .radio {
+        margin-right: 20px;
+    }
+
+    .difficulty-name {
+        font-size: 20px;
+    }
+
+    .difficulty-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .difficulty-buttons {
+        gap: 10px;
+    }
+
+    .play-btn,
+    .back-btn {
+        width: 50%;
+    }
+
+    .difficulty-description {
+        display: none;
+    }
+}
