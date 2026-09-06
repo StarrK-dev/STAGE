@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="menu-container">
+    <h1>SNAKE</h1>
+    <p class="subtitle">CLASSIC GAME</p>
+
+    <div class="buttons">
+        <button class="btn start" onclick="startGame()">START GAME</button>
+        <button class="btn" onclick="showScores()">HIGH SCORES</button>
+        <button class="btn" onclick="exitGame()">EXIT</button>
+    </div>
+</div>
+
+<script>
+function startGame() {
+    window.location.href = "../2/index.html";
+}
+
+function showScores() {
+    const best = localStorage.getItem("snakeBest") || 0;
+    alert("HIGH SCORE: " + best);
+}
+
+function exitGame() {
+    window.close();
+}
+</script>
+
+</body>
+</html>

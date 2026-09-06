@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake - Choose Difficulty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="difficulty-screen">
+
+    <h1>CHOOSE DIFFICULTY</h1>
+
+    <div class="difficulty-list">
+
+        <label class="difficulty">
+            <input type="radio" name="difficulty" value="easy">
+            <span class="radio"></span>
+            <span class="difficulty-name">EASY</span>
+            <span class="difficulty-description">Slow speed</span>
+        </label>
+
+        <label class="difficulty">
+            <input type="radio" name="difficulty" value="medium" checked>
+            <span class="radio"></span>
+            <span class="difficulty-name">MEDIUM</span>
+            <span class="difficulty-description">Normal speed</span>
+        </label>
+
+        <label class="difficulty">
+            <input type="radio" name="difficulty" value="hard">
+            <span class="radio"></span>
+            <span class="difficulty-name">HARD</span>
+            <span class="difficulty-description">Fast speed</span>
+        </label>
+
+    </div>
+
+    <div class="difficulty-buttons">
+        <button class="play-btn" onclick="startGame()">PLAY</button>
+        <button class="back-btn" onclick="goBack()">BACK</button>
+    </div>
+
+</div>
+
+<script>
+function startGame() {
+    const selected = document.querySelector('input[name="difficulty"]:checked');
+    window.location.href = "../3/index.html?difficulty=" + selected.value;
+}
+
+function goBack() {
+    window.location.href = "../1/index.html";
+}
+</script>
+
+</body>
+</html>

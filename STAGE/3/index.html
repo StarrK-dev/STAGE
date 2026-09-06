@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Gameplay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-panel">
+
+    <div class="score-bar">
+
+        <div class="score-item">
+            <span>SCORE:</span>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="score-item">
+            <span>BEST:</span>
+            <strong id="best">0</strong>
+        </div>
+
+        <button class="pause" id="pauseButton">PAUSE</button>
+
+    </div>
+
+    <div class="game-content">
+
+        <div class="board" id="board">
+            <div class="food" id="food"></div>
+            <div class="snake" id="snake"></div>
+        </div>
+
+        <div class="controls">
+
+            <h2>CONTROLS</h2>
+
+            <div class="arrow up">↑</div>
+
+            <div class="arrow-row">
+                <div class="arrow">←</div>
+                <div class="arrow">↓</div>
+                <div class="arrow">→</div>
+            </div>
+
+            <p class="instruction">Use arrow keys to move</p>
+
+            <div class="commands">
+                <div>
+                    <span>P</span>
+                    <label>- &nbsp; Pause</label>
+                </div>
+
+                <div>
+                    <span>R</span>
+                    <label>- &nbsp; Restart</label>
+                </div>
+
+                <div>
+                    <span>Esc</span>
+                    <label>- &nbsp; Menu</label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/game.js"></script>
+
+</body>
+</html>
